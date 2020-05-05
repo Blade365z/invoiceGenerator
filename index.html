@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Invoice Generator</title>
+    <link href="resources /bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		 <link href="./app.css" rel="stylesheet" />
+		 <script src="resources /jsPDF-1.3.2/dist/jspdf.min.js"></script>
+  </head>
+
+  <body class="bg-dark">
+    <div class="container p-0" id="main_parent">
+      <div class="row justify-content-center py-3">
+        <h1 class="text-white text-center">Invoice Generation Portal</h1>
+      </div>
+      <div class="row  justify-content-center p-0">
+        <form class="p-0" id="invoice_generator_form">
+          <div class="form-group row text-white d-flex">
+            <label for="name">Enter Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter the name here"
+            />
+          </div>
+          <div class="form-group row text-white d-flex ">
+            <label for="address">Enter Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              placeholder="Address"
+						/>
+							<span style="display: flex ">
+<input
+              type="text"
+              class="form-control my-2"
+              id="state"
+              placeholder="State"
+						/>
+						<input
+              type="text"
+              class="form-control my-2 mx-2"
+              id="pincode"
+              placeholder="Pincode"
+						/>
+
+							</span>
+						
+
+          </div>
+
+        <span>  <button type="submit" class="btn btn-primary btn-md  ml-auto mr-auto">
+            Submit
+          </button>  <button id="download" class="btn btn-warning btn-md  ml-auto mr-auto">
+            Download
+          </button>    </span>
+        </form>
+      </div>
+      
+      <div class="card  my-3">
+        <div class="card-body  ">
+                <center>
+            <DIV id="page_1" class="border"> 
+
+<DIV id="p1dimg1">
+<IMG src="resources /logo.png" id="p1img1"></DIV>
+
+<TABLE cellpadding=0 cellspacing=0 class="t0">
+<TR>
+	<TD colspan=4 class="tr0 td0"><P class="p0 ft0">P R Entertainment India and Destination Hub</P></TD>
+	<TD colspan=3 rowspan=2 class="tr1 td1"><P class="p1 ft1">Tax Invoice</P></TD>
+	<TD class="tr0 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr0 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD colspan=3 rowspan=2 class="tr2 td4"><P class="p0 ft0">Service Private Limited</P></TD>
+	<TD class="tr3 td5"><P class="p1 ft3">&nbsp;</P></TD>
+	<TD class="tr3 td2"><P class="p1 ft3">&nbsp;</P></TD>
+	<TD class="tr3 td3"><P class="p1 ft3">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr4 td5"><P class="p1 ft4">&</center>bsp;</P></TD>
+	<TD class="tr4 td6"><P class="p1 ft4">&</center>bsp;</P></TD>
+	<TD class="tr4 td7"><P class="p1 ft4">&</center>bsp;</P></TD>
+	<TD class="tr4 td8"><P class="p1 ft4">&</center>bsp;</P></TD>
+	<TD class="tr4 td2"><P class="p1 ft4">&</center>bsp;</P></TD>
+	<TD class="tr4 td3"><P class="p1 ft4">&</center>bsp;</P></TD>
+</TR>
+<TR>
+	<TD colspan=4 class="tr2 td0"><P class="p0 ft5">2, A202, SNR SILVER RIPPLES, SARJAPUR</P></TD>
+	<TD class="tr2 td6"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD colspan=3 class="tr5 td4"><P class="p0 ft5">ROAD, TRINITY COMPLEX</P></TD>
+	<TD class="tr5 td5"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td6"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD colspan=3 class="tr2 td4"><P class="p0 ft5">BANGALORE, Karnataka 562125</P></TD>
+	<TD class="tr2 td5"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td6"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr5 td9"><P class="p0 ft5">IN</P></TD>
+	<TD class="tr5 td10"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td11"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td5"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td6"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD colspan=3 class="tr2 td4"><P class="p0 ft5">operations@70mmflix.com</P></TD>
+	<TD class="tr2 td5"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td6"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD colspan=3 class="tr2 td4"><P class="p0 ft5">GSTIN: 29AAJCP8354N1ZI</P></TD>
+	<TD class="tr2 td5"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td6"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD colspan=3 class="tr5 td4"><P class="p0 ft5">CIN: U74993AS2018PTC018481</P></TD>
+	<TD class="tr5 td5"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td6"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr6 td9"><P class="p1 ft6">&nbsp;</P></TD>
+	<TD class="tr7 td12"><P class="p1 ft7">&nbsp;</P></TD>
+	<TD class="tr7 td13"><P class="p1 ft7">&nbsp;</P></TD>
+	<TD class="tr7 td14"><P class="p1 ft7">&nbsp;</P></TD>
+	<TD class="tr7 td15"><P class="p1 ft7">&nbsp;</P></TD>
+	<TD class="tr6 td7"><P class="p1 ft6">&nbsp;</P></TD>
+	<TD class="tr6 td8"><P class="p1 ft6">&nbsp;</P></TD>
+	<TD class="tr6 td2"><P class="p1 ft6">&nbsp;</P></TD>
+	<TD class="tr6 td3"><P class="p1 ft6">&nbsp;</P></TD>
+</TR>
+
+
+
+
+
+<TR>
+	<TD class="tr8 td16"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD colspan=2 class="tr9 td17"><P class="p2 ft8">INVOICE TO</P></TD>
+	<TD class="tr9 td14"><P class="p1 ft9">&nbsp;</P></TD>
+	<TD class="tr9 td18"><P class="p1 ft9">&nbsp;</P></TD>
+	<TD class="tr8 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr10 td16"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD colspan=2 class="tr10 td19"><P class="p2 ft5" id="cutosmerName">S S Sandeep</P></TD>
+	<TD class="tr10 td5"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td20"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr10 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr2 td16"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD colspan=2 class="tr2 td19"><P class="p2 ft5">SA 26</P></TD>
+	<TD class="tr2 td5"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td20"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr5 td16"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD colspan=2 class="tr5 td19"><P class="p2 ft5" id="customerAddress">Bangalore</P></TD>
+	<TD class="tr5 td5"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td20"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr2 td16"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD colspan=2 class="tr2 td19"><P class="p2 ft5"  id="customerState">Karnataka</P></TD>
+	<TD class="tr2 td5"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td20"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr5 td16"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td10"><P class="p2 ft5" id="customerPincode">562125</P></TD>
+	<TD class="tr5 td11"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td5"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td20"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr2 td16"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD colspan=2 class="tr2 td19"><P class="p2 ft5">State Code: 29</P></TD>
+	<TD class="tr2 td5"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td20"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr2 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr11 td16"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD colspan=2 class="tr11 td19"><P class="p2 ft10">PLACE OF SUPPLY</P></TD>
+	<TD class="tr11 td5"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr11 td20"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr11 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr11 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr11 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr11 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr12 td16"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD colspan=2 class="tr5 td17"><P class="p2 ft5">29 - Karnataka</P></TD>
+	<TD class="tr5 td14"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr5 td18"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr12 td7"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr12 td8"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr12 td2"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr12 td3"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr13 td21"><P class="p1 ft11">&nbsp;</P></TD>
+	<TD class="tr13 td12"><P class="p1 ft11">&nbsp;</P></TD>
+	<TD class="tr13 td13"><P class="p1 ft11">&nbsp;</P></TD>
+	<TD colspan=3 class="tr13 td22"><P class="p1 ft11">&nbsp;</P></TD>
+	<TD class="tr13 td23"><P class="p1 ft11">&nbsp;</P></TD>
+	<TD class="tr13 td24"><P class="p1 ft11">&nbsp;</P></TD>
+	<TD class="tr13 td25"><P class="p1 ft11">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr8 td26"><P class="p2 ft8">INVOICE NO.</P></TD>
+	<TD class="tr8 td27"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td28"><P class="p3 ft8">DATE</P></TD>
+	<TD colspan=3 class="tr8 td29"><P class="p3 ft8">TOTAL DUE</P></TD>
+	<TD class="tr8 td30"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td31"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td32"><P class="p4 ft8">ENCLOSED</P></TD>
+</TR>
+<TR>
+	<TD class="tr14 td33"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td34"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td35"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td14"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td15"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td36"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td37"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td38"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td39"><P class="p1 ft12">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr15 td33"><P class="p2 ft5" id="invoice_id">1001</P></TD>
+	<TD class="tr15 td34"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr15 td35"><P class="p3 ft5" id="invoice_date">29/12/2019</P></TD>
+	<TD class="tr15 td14"><P class="p3 ft5"><SPAN class="ft13">₹</SPAN>99.00</P></TD>
+	<TD class="tr15 td15"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr15 td36"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr15 td37"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr15 td38"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr15 td39"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+</TABLE>
+<TABLE cellpadding=0 cellspacing=0 class="t1">
+<TR>
+	<TD class="tr16 td40"><P class="p2 ft14">NO</P></TD>
+	<TD class="tr16 td41"><P class="p5 ft14">HSN</P></TD>
+	<TD class="tr16 td42"><P class="p2 ft14">DATE</P></TD>
+	<TD class="tr16 td43"><P class="p4 ft14">ACTIVITY</P></TD>
+	<TD class="tr16 td43"><P class="p4 ft14">DESCRIPTION</P></TD>
+	<TD class="tr16 td41"><P class="p6 ft14">TAX</P></TD>
+	<TD class="tr16 td44"><P class="p7 ft14">AMOUNT</P></TD>
+</TR>
+<TR>
+	<TD class="tr14 td45"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td46"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td47"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td48"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td48"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td46"><P class="p1 ft12">&nbsp;</P></TD>
+	<TD class="tr14 td49"><P class="p1 ft12">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr16 td50"><P class="p2 ft5">1</P></TD>
+	<TD class="tr16 td51"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr16 td52"><P class="p2 ft5">31/12/2019</P></TD>
+	<TD class="tr16 td53"><P class="p4 ft0">Services</P></TD>
+	<TD class="tr16 td53"><P class="p4 ft5">1 Month</P></TD>
+	<TD class="tr16 td51"><P class="p8 ft5">18.0%</P></TD>
+	<TD class="tr16 td54"><P class="p9 ft5">83.90</P></TD>
+</TR>
+<TR>
+	<TD class="tr8 td50"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td51"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td52"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td53"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td53"><P class="p4 ft5">Subscription</P></TD>
+	<TD class="tr8 td51"><P class="p8 ft5">GST</P></TD>
+	<TD class="tr8 td54"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr8 td50"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td51"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td52"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td53"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td53"><P class="p4 ft5">charges for 70</P></TD>
+	<TD class="tr8 td51"><P class="p1 ft2">&nbsp;</P></TD>
+	<TD class="tr8 td54"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+<TR>
+	<TD class="tr9 td45"><P class="p1 ft9">&nbsp;</P></TD>
+	<TD class="tr9 td46"><P class="p1 ft9">&nbsp;</P></TD>
+	<TD class="tr9 td47"><P class="p1 ft9">&nbsp;</P></TD>
+	<TD class="tr9 td48"><P class="p1 ft9">&nbsp;</P></TD>
+	<TD class="tr9 td48"><P class="p4 ft15">MM flix</P></TD>
+	<TD class="tr9 td46"><P class="p1 ft9">&nbsp;</P></TD>
+	<TD class="tr9 td49"><P class="p1 ft9">&nbsp;</P></TD>
+</TR>
+</TABLE>
+<TABLE cellpadding=0 cellspacing=0 class="t2">
+<TR>
+	<TD class="tr15 td55"><P class="p1 ft5">SUBTOTAL</P></TD>
+	<TD class="tr15 td56"><P class="p9 ft5">83.90</P></TD>
+</TR>
+<TR>
+	<TD class="tr12 td55"><P class="p1 ft5">CGST @ 9% on 83.90</P></TD>
+	<TD class="tr12 td56"><P class="p9 ft5">7.55</P></TD>
+</TR>
+<TR>
+	<TD class="tr16 td55"><P class="p1 ft5">SGST @ 9% on 83.90</P></TD>
+	<TD class="tr16 td56"><P class="p9 ft5">7.55</P></TD>
+</TR>
+<TR>
+	<TD class="tr12 td55"><P class="p1 ft5">TOTAL</P></TD>
+	<TD class="tr12 td56"><P class="p9 ft5">99.00</P></TD>
+</TR>
+<TR>
+	<TD class="tr12 td55"><P class="p1 ft5">BALANCE DUE</P></TD>
+	<TD rowspan=2 class="tr1 td56"><P class="p10 ft1"><SPAN class="ft16">₹</SPAN>99.00</P></TD>
+</TR>
+<TR>
+	<TD class="tr2 td55"><P class="p1 ft2">&nbsp;</P></TD>
+</TR>
+</TABLE>
+<P class="p11 ft17">Authorised Signatory</P>
+<P class="p12 ft17">Abhijit Gogoi</P>
+</DIV>
+</center>
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+	</body>
+	<script src="./jquery.js" ></script>
+	<script src="invoice_generator.js" ></script>
+</html>
